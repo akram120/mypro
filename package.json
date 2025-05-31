@@ -1,0 +1,68 @@
+{
+  "name": "alnoamanserverapi",
+  "version": "1.0.0",
+  "description": "This Server is Developed for Alnoaman Integrations with other Compaines via Restfull Api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "AL_NOAMAN_COMPANY"
+  ],
+  "author": "Khaled SharafAldden, Akram Al-Awady.",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "build": {
+    "win": {
+      "requestedExecutionLevel": "requireAdministrator"
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "crypto": "^1.0.1",
+    "date-and-time": "^3.3.0",
+    "dateformat": "^4.5.1",
+    "dotenv": "^16.4.6",
+    "easy-soap-request": "^4.8.0",
+    "ejs": "^3.1.5",
+    "electron-builder": "^24.9.1",
+    "encodeurl": "^2.0.0",
+    "express": "^4.21.1",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
+    "jquery": "^3.5.1",
+    "jsdom": "^22.1.0",
+    "jsontoxml": "^1.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "languagedetect": "^2.0.0",
+    "libxmljs": "^0.19.7",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0",
+    "node-cmd": "^4.0.0",
+    "node-pre-gyp": "^0.17.0",
+    "node-schedule": "^2.1.1",
+    "nodemo": "^1.0.0",
+    "npm": "^6.14.8",
+    "python": "0.0.4",
+    "python2": "0.0.1",
+    "rand-token": "^1.0.1",
+    "random-number": "0.0.9",
+    "reqest": "0.0.1-security",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "socket.io": "^2.3.0",
+    "to": "^0.2.9",
+    "update": "^0.7.4",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.2",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.23",
+    "xml2js-xpath": "^0.11.0"
+  }
+}
