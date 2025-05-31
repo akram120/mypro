@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel='stylesheet' href="/css/datatables.min.css"/>
 <link rel='stylesheet' href="/css/custom.css"/>
+
 <script  src="/js/jquery.min.js"></script>
 <script  src="/js/datatables.min.js"></script>
 <script  src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,14 +15,12 @@
 <body>
     <div class="container">
 
-    <table id="myTable" class="display-4 " style="width:100%">
+    <table id="myTable" class="display-4" style="width:100%">
         <thead>
         
             <tr>
                 <th>Object_ID</th>
                 <th>rem_no</th>
-                <th>Mobile_no</th>
-                <th>otp</th>
                 <th>transaction_id</th>
                 <th>service_name</th>
                 <th>service_type</th>
@@ -51,8 +50,6 @@
                 <tr>
                <td> <%= getData[i]['_id'] %> </td>
                <td> <%= getData[i]['rem_no'] %> </td>
-               <td> <%= getData[i]['mobile_no'] %> </td>
-               <td> <%= getData[i]['OTP'] %> </td>
                <td> <%= getData[i]['transaction_id'] %> </td>
                <td> <%= getData[i]['service_name'] %> </td>
                <td> <%= getData[i]['service_type'] %> </td>
@@ -85,14 +82,14 @@
     <script>
     
       $(document).ready( function () {
+
         $('#myTable').DataTable(
             {
-            "ordering" : false
+            "ordering" : false,
+            
         
     }
-        );
-    } );
-    
+    )} );
     
     </script>
    
