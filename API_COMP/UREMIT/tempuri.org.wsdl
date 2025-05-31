@@ -1,0 +1,1638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ReceiveAPI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" />
+      <xs:element name="ChangePassword">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q1:ChangePasswordRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangePasswordResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="ChangePasswordResult" nillable="true" type="q2:APICallResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFieldCharacterLengthList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q3:CharacterLengthRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFieldCharacterLengthListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetFieldCharacterLengthListResult" nillable="true" type="q4:CharacterLengthResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrencyScaleList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q5:CurrencyScaleRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrencyScaleListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetCurrencyScaleListResult" nillable="true" type="q6:CurrencyScaleResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetListOfAcceptableIDsByIDCategory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q7:IDTypeListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetListOfAcceptableIDsByIDCategoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetListOfAcceptableIDsByIDCategoryResult" nillable="true" type="q8:IDTypeListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetIDTypeCategoryList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q9:IDTypeCategoryListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetIDTypeCategoryListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetIDTypeCategoryListResult" nillable="true" type="q10:IDTypeCategoryListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAPIResponseCodeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q11:ResponseCodeListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAPIResponseCodeListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetAPIResponseCodeListResult" nillable="true" type="q12:ResponseCodeListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgentListOfAccounts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q13:AgentAccountListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgentListOfAccountsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetAgentListOfAccountsResult" nillable="true" type="q14:AgentAccountListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayCashTransactionForPaying">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q15:DisplayCashTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayCashTransactionForPayingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayCashTransactionForPayingResult" nillable="true" type="q16:DisplayCashTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayDoorToDoorTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q17:DisplayDoorToDoorTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayDoorToDoorTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayDoorToDoorTransactionResult" nillable="true" type="q18:DisplayDoorToDoorTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayCashToMobileTranaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q19:DisplayCashToMobileTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayCashToMobileTranactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayCashToMobileTranactionResult" nillable="true" type="q20:DisplayCashToMobileTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCashTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q21:ProcessCashTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCashTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="ProcessCashTransactionResult" nillable="true" type="q22:ProcessCashTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayBankCreditTranaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q23:DisplayBankTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayBankCreditTranactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayBankCreditTranactionResult" nillable="true" type="q24:DisplayBankTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListSameBankCredit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q25:DisplayTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListSameBankCreditResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayTransactionListSameBankCreditResult" nillable="true" type="q26:DisplayTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListOtherBankCredit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q27:DisplayTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListOtherBankCreditResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayTransactionListOtherBankCreditResult" nillable="true" type="q28:DisplayTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListCash">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q29:DisplayTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListCashResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayTransactionListCashResult" nillable="true" type="q30:DisplayTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListDoorToDoor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q31:DisplayTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListDoorToDoorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayTransactionListDoorToDoorResult" nillable="true" type="q32:DisplayTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListCashToMobile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q33:DisplayTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisplayTransactionListCashToMobileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="DisplayTransactionListCashToMobileResult" nillable="true" type="q34:DisplayTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessBankCreditTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q35:ProcessBankTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessBankCreditTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="ProcessBankCreditTransactionResult" nillable="true" type="q36:ProcessBankTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PayTranactionCashOrBank">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q37:PayTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PayTranactionCashOrBankResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="PayTranactionCashOrBankResult" nillable="true" type="q38:PayTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTransactionStatusFromProcessedToPaid">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q39:UpdateTransactionStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTransactionStatusFromProcessedToPaidResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="UpdateTransactionStatusFromProcessedToPaidResult" nillable="true" type="q40:UpdateTransactionStatusResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReturnTransactionPostQuery">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q41:ReturnTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReturnTransactionPostQueryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="ReturnTransactionPostQueryResult" nillable="true" type="q42:ReturnTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetListOfReturnTransactionPostQueryReasonMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q43:ReturnTransactionPostQueryReasonMessageRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetListOfReturnTransactionPostQueryReasonMessageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetListOfReturnTransactionPostQueryReasonMessageResult" nillable="true" type="q44:ReturnTransactionPostQueryReasonMessageResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadIDDocumentForPaidOrProcessedCashTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q45:DocumentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadIDDocumentForPaidOrProcessedCashTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="UploadIDDocumentForPaidOrProcessedCashTransactionResult" nillable="true" type="q46:DocumentResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadProofOfPayment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q47:ProofPaymentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UploadProofOfPaymentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="UploadProofOfPaymentResult" nillable="true" type="q48:ProofPaymentResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountryList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q49:CountryListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCountryListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetCountryListResult" nillable="true" type="q50:CountryListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNationalityList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="req" nillable="true" type="q51:NationalityListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNationalityListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" minOccurs="0" name="GetNationalityListResult" nillable="true" type="q52:NationalityListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/URemitWCFLib.Receive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ChangePasswordRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ChangePasswordRequest" nillable="true" type="tns:ChangePasswordRequest" />
+      <xs:complexType name="APICallResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="APICallResponse" nillable="true" type="tns:APICallResponse" />
+      <xs:complexType name="CharacterLengthRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CharacterLengthRequest" nillable="true" type="tns:CharacterLengthRequest" />
+      <xs:complexType name="CharacterLengthResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsCharacterLengthList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CharacterLengthResponse" nillable="true" type="tns:CharacterLengthResponse" />
+      <xs:complexType name="CurrencyScaleRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CurrencyScaleRequest" nillable="true" type="tns:CurrencyScaleRequest" />
+      <xs:complexType name="CurrencyScaleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsCurrencyScaleList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CurrencyScaleResponse" nillable="true" type="tns:CurrencyScaleResponse" />
+      <xs:complexType name="IDTypeListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IDCategoryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="IDTypeListRequest" nillable="true" type="tns:IDTypeListRequest" />
+      <xs:complexType name="IDTypeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsIDTypeList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="IDTypeListResponse" nillable="true" type="tns:IDTypeListResponse" />
+      <xs:complexType name="IDTypeCategoryListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="IDTypeCategoryListRequest" nillable="true" type="tns:IDTypeCategoryListRequest" />
+      <xs:complexType name="IDTypeCategoryListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsIDCategoryList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="IDTypeCategoryListResponse" nillable="true" type="tns:IDTypeCategoryListResponse" />
+      <xs:complexType name="ResponseCodeListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ResponseCodeListRequest" nillable="true" type="tns:ResponseCodeListRequest" />
+      <xs:complexType name="ResponseCodeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsResponseCode" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ResponseCodeListResponse" nillable="true" type="tns:ResponseCodeListResponse" />
+      <xs:complexType name="AgentAccountListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AgentAccountListRequest" nillable="true" type="tns:AgentAccountListRequest" />
+      <xs:complexType name="AgentAccountListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsAccountList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AgentAccountListResponse" nillable="true" type="tns:AgentAccountListResponse" />
+      <xs:complexType name="DisplayCashTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayCashTransactionRequest" nillable="true" type="tns:DisplayCashTransactionRequest" />
+      <xs:complexType name="DisplayCashTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderNationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayCashTransactionResponse" nillable="true" type="tns:DisplayCashTransactionResponse" />
+      <xs:complexType name="DisplayDoorToDoorTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayDoorToDoorTransactionRequest" nillable="true" type="tns:DisplayDoorToDoorTransactionRequest" />
+      <xs:complexType name="DisplayDoorToDoorTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayDoorToDoorTransactionResponse" nillable="true" type="tns:DisplayDoorToDoorTransactionResponse" />
+      <xs:complexType name="DisplayCashToMobileTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayCashToMobileTransactionRequest" nillable="true" type="tns:DisplayCashToMobileTransactionRequest" />
+      <xs:complexType name="DisplayCashToMobileTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayCashToMobileTransactionResponse" nillable="true" type="tns:DisplayCashToMobileTransactionResponse" />
+      <xs:complexType name="ProcessCashTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessBranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProcessCashTransactionRequest" nillable="true" type="tns:ProcessCashTransactionRequest" />
+      <xs:complexType name="ProcessCashTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommissionShareLC" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CommissionShareUSD" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProcessCashTransactionResponse" nillable="true" type="tns:ProcessCashTransactionResponse" />
+      <xs:complexType name="DisplayBankTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayBankTransactionRequest" nillable="true" type="tns:DisplayBankTransactionRequest" />
+      <xs:complexType name="DisplayBankTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAccountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankBranch" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankZipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IBAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderIDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayBankTransactionResponse" nillable="true" type="tns:DisplayBankTransactionResponse" />
+      <xs:complexType name="DisplayTransactionListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayTransactionListRequest" nillable="true" type="tns:DisplayTransactionListRequest" />
+      <xs:complexType name="DisplayTransactionListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsTransactionList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DisplayTransactionListResponse" nillable="true" type="tns:DisplayTransactionListResponse" />
+      <xs:complexType name="ProcessBankTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProcessBankTransactionRequest" nillable="true" type="tns:ProcessBankTransactionRequest" />
+      <xs:complexType name="ProcessBankTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommissionShareLC" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CommissionShareUSD" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProcessBankTransactionResponse" nillable="true" type="tns:ProcessBankTransactionResponse" />
+      <xs:complexType name="PayTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaidBranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverIDExpiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverIDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverIDPlaceOfIssue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverIDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverOccupation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderRelationWithReceiver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PayTransactionRequest" nillable="true" type="tns:PayTransactionRequest" />
+      <xs:complexType name="PayTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountToPay" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommissionShareLC" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CommissionShareUSD" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverMobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiverOccupation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderRelationWithReceiver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PayTransactionResponse" nillable="true" type="tns:PayTransactionResponse" />
+      <xs:complexType name="UpdateTransactionStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaidBranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UpdateTransactionStatusRequest" nillable="true" type="tns:UpdateTransactionStatusRequest" />
+      <xs:complexType name="UpdateTransactionStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UpdateTransactionStatusResponse" nillable="true" type="tns:UpdateTransactionStatusResponse" />
+      <xs:complexType name="ReturnTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaidBranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReasonDetails" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReasonMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReturnTransactionRequest" nillable="true" type="tns:ReturnTransactionRequest" />
+      <xs:complexType name="ReturnTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgentReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReturnTransactionResponse" nillable="true" type="tns:ReturnTransactionResponse" />
+      <xs:complexType name="ReturnTransactionPostQueryReasonMessageRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReturnTransactionPostQueryReasonMessageRequest" nillable="true" type="tns:ReturnTransactionPostQueryReasonMessageRequest" />
+      <xs:complexType name="ReturnTransactionPostQueryReasonMessageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsReturnTransactionPostQueryReasonMessageList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReturnTransactionPostQueryReasonMessageResponse" nillable="true" type="tns:ReturnTransactionPostQueryReasonMessageResponse" />
+      <xs:complexType name="DocumentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocumentImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DocumentRequest" nillable="true" type="tns:DocumentRequest" />
+      <xs:complexType name="DocumentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DocumentResponse" nillable="true" type="tns:DocumentResponse" />
+      <xs:complexType name="ProofPaymentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocumentImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProofPaymentRequest" nillable="true" type="tns:ProofPaymentRequest" />
+      <xs:complexType name="ProofPaymentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProofPaymentResponse" nillable="true" type="tns:ProofPaymentResponse" />
+      <xs:complexType name="CountryListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CountryListRequest" nillable="true" type="tns:CountryListRequest" />
+      <xs:complexType name="CountryListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsCountryList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CountryListResponse" nillable="true" type="tns:CountryListResponse" />
+      <xs:complexType name="NationalityListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="NationalityListRequest" nillable="true" type="tns:NationalityListRequest" />
+      <xs:complexType name="NationalityListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="dsNationalityList" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:element ref="xs:schema" />
+                <xs:any />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="NationalityListResponse" nillable="true" type="tns:NationalityListResponse" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="DataSet" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IReceiveAPI_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetFieldCharacterLengthList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFieldCharacterLengthList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetFieldCharacterLengthList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFieldCharacterLengthListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetCurrencyScaleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyScaleList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetCurrencyScaleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyScaleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetListOfAcceptableIDsByIDCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfAcceptableIDsByIDCategory" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetListOfAcceptableIDsByIDCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfAcceptableIDsByIDCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetIDTypeCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIDTypeCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetIDTypeCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIDTypeCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetAPIResponseCodeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAPIResponseCodeList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetAPIResponseCodeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAPIResponseCodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetAgentListOfAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentListOfAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetAgentListOfAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentListOfAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayCashTransactionForPaying_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayCashTransactionForPaying" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayCashTransactionForPaying_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayCashTransactionForPayingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayDoorToDoorTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDoorToDoorTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayDoorToDoorTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDoorToDoorTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayCashToMobileTranaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayCashToMobileTranaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayCashToMobileTranaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayCashToMobileTranactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ProcessCashTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCashTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ProcessCashTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessCashTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayBankCreditTranaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayBankCreditTranaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayBankCreditTranaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayBankCreditTranactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListSameBankCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListSameBankCredit" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListSameBankCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListSameBankCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListOtherBankCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListOtherBankCredit" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListOtherBankCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListOtherBankCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListCash_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListCash" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListCash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListDoorToDoor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListDoorToDoor" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListDoorToDoor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListDoorToDoorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListCashToMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListCashToMobile" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_DisplayTransactionListCashToMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayTransactionListCashToMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ProcessBankCreditTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBankCreditTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ProcessBankCreditTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBankCreditTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_PayTranactionCashOrBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:PayTranactionCashOrBank" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_PayTranactionCashOrBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PayTranactionCashOrBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UpdateTransactionStatusFromProcessedToPaid_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionStatusFromProcessedToPaid" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UpdateTransactionStatusFromProcessedToPaid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionStatusFromProcessedToPaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ReturnTransactionPostQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTransactionPostQuery" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_ReturnTransactionPostQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTransactionPostQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetListOfReturnTransactionPostQueryReasonMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfReturnTransactionPostQueryReasonMessage" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetListOfReturnTransactionPostQueryReasonMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfReturnTransactionPostQueryReasonMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UploadIDDocumentForPaidOrProcessedCashTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadIDDocumentForPaidOrProcessedCashTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UploadIDDocumentForPaidOrProcessedCashTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadIDDocumentForPaidOrProcessedCashTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UploadProofOfPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadProofOfPayment" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_UploadProofOfPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadProofOfPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetCountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetCountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetNationalityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveAPI_GetNationalityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReceiveAPI">
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/ChangePassword" message="tns:IReceiveAPI_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/ChangePasswordResponse" message="tns:IReceiveAPI_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldCharacterLengthList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetFieldCharacterLengthList" message="tns:IReceiveAPI_GetFieldCharacterLengthList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetFieldCharacterLengthListResponse" message="tns:IReceiveAPI_GetFieldCharacterLengthList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyScaleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetCurrencyScaleList" message="tns:IReceiveAPI_GetCurrencyScaleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetCurrencyScaleListResponse" message="tns:IReceiveAPI_GetCurrencyScaleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfAcceptableIDsByIDCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetListOfAcceptableIDsByIDCategory" message="tns:IReceiveAPI_GetListOfAcceptableIDsByIDCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetListOfAcceptableIDsByIDCategoryResponse" message="tns:IReceiveAPI_GetListOfAcceptableIDsByIDCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDTypeCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetIDTypeCategoryList" message="tns:IReceiveAPI_GetIDTypeCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetIDTypeCategoryListResponse" message="tns:IReceiveAPI_GetIDTypeCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAPIResponseCodeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetAPIResponseCodeList" message="tns:IReceiveAPI_GetAPIResponseCodeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetAPIResponseCodeListResponse" message="tns:IReceiveAPI_GetAPIResponseCodeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentListOfAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetAgentListOfAccounts" message="tns:IReceiveAPI_GetAgentListOfAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetAgentListOfAccountsResponse" message="tns:IReceiveAPI_GetAgentListOfAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCashTransactionForPaying">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayCashTransactionForPaying" message="tns:IReceiveAPI_DisplayCashTransactionForPaying_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayCashTransactionForPayingResponse" message="tns:IReceiveAPI_DisplayCashTransactionForPaying_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDoorToDoorTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayDoorToDoorTransaction" message="tns:IReceiveAPI_DisplayDoorToDoorTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayDoorToDoorTransactionResponse" message="tns:IReceiveAPI_DisplayDoorToDoorTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCashToMobileTranaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayCashToMobileTranaction" message="tns:IReceiveAPI_DisplayCashToMobileTranaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayCashToMobileTranactionResponse" message="tns:IReceiveAPI_DisplayCashToMobileTranaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/ProcessCashTransaction" message="tns:IReceiveAPI_ProcessCashTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/ProcessCashTransactionResponse" message="tns:IReceiveAPI_ProcessCashTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayBankCreditTranaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayBankCreditTranaction" message="tns:IReceiveAPI_DisplayBankCreditTranaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayBankCreditTranactionResponse" message="tns:IReceiveAPI_DisplayBankCreditTranaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListSameBankCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListSameBankCredit" message="tns:IReceiveAPI_DisplayTransactionListSameBankCredit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListSameBankCreditResponse" message="tns:IReceiveAPI_DisplayTransactionListSameBankCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListOtherBankCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListOtherBankCredit" message="tns:IReceiveAPI_DisplayTransactionListOtherBankCredit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListOtherBankCreditResponse" message="tns:IReceiveAPI_DisplayTransactionListOtherBankCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListCash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListCash" message="tns:IReceiveAPI_DisplayTransactionListCash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListCashResponse" message="tns:IReceiveAPI_DisplayTransactionListCash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListDoorToDoor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListDoorToDoor" message="tns:IReceiveAPI_DisplayTransactionListDoorToDoor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListDoorToDoorResponse" message="tns:IReceiveAPI_DisplayTransactionListDoorToDoor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListCashToMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListCashToMobile" message="tns:IReceiveAPI_DisplayTransactionListCashToMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/DisplayTransactionListCashToMobileResponse" message="tns:IReceiveAPI_DisplayTransactionListCashToMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBankCreditTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/ProcessBankCreditTransaction" message="tns:IReceiveAPI_ProcessBankCreditTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/ProcessBankCreditTransactionResponse" message="tns:IReceiveAPI_ProcessBankCreditTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PayTranactionCashOrBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/PayTranactionCashOrBank" message="tns:IReceiveAPI_PayTranactionCashOrBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/PayTranactionCashOrBankResponse" message="tns:IReceiveAPI_PayTranactionCashOrBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransactionStatusFromProcessedToPaid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/UpdateTransactionStatusFromProcessedToPaid" message="tns:IReceiveAPI_UpdateTransactionStatusFromProcessedToPaid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/UpdateTransactionStatusFromProcessedToPaidResponse" message="tns:IReceiveAPI_UpdateTransactionStatusFromProcessedToPaid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTransactionPostQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/ReturnTransactionPostQuery" message="tns:IReceiveAPI_ReturnTransactionPostQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/ReturnTransactionPostQueryResponse" message="tns:IReceiveAPI_ReturnTransactionPostQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfReturnTransactionPostQueryReasonMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetListOfReturnTransactionPostQueryReasonMessage" message="tns:IReceiveAPI_GetListOfReturnTransactionPostQueryReasonMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetListOfReturnTransactionPostQueryReasonMessageResponse" message="tns:IReceiveAPI_GetListOfReturnTransactionPostQueryReasonMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadIDDocumentForPaidOrProcessedCashTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/UploadIDDocumentForPaidOrProcessedCashTransaction" message="tns:IReceiveAPI_UploadIDDocumentForPaidOrProcessedCashTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/UploadIDDocumentForPaidOrProcessedCashTransactionResponse" message="tns:IReceiveAPI_UploadIDDocumentForPaidOrProcessedCashTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadProofOfPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/UploadProofOfPayment" message="tns:IReceiveAPI_UploadProofOfPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/UploadProofOfPaymentResponse" message="tns:IReceiveAPI_UploadProofOfPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetCountryList" message="tns:IReceiveAPI_GetCountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetCountryListResponse" message="tns:IReceiveAPI_GetCountryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveAPI/GetNationalityList" message="tns:IReceiveAPI_GetNationalityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveAPI/GetNationalityListResponse" message="tns:IReceiveAPI_GetNationalityList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReceiveAPI" type="tns:IReceiveAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldCharacterLengthList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetFieldCharacterLengthList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyScaleList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetCurrencyScaleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfAcceptableIDsByIDCategory">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetListOfAcceptableIDsByIDCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDTypeCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetIDTypeCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAPIResponseCodeList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetAPIResponseCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentListOfAccounts">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetAgentListOfAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCashTransactionForPaying">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayCashTransactionForPaying" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDoorToDoorTransaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayDoorToDoorTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCashToMobileTranaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayCashToMobileTranaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashTransaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/ProcessCashTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayBankCreditTranaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayBankCreditTranaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListSameBankCredit">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayTransactionListSameBankCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListOtherBankCredit">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayTransactionListOtherBankCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListCash">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayTransactionListCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListDoorToDoor">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayTransactionListDoorToDoor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayTransactionListCashToMobile">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/DisplayTransactionListCashToMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBankCreditTransaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/ProcessBankCreditTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayTranactionCashOrBank">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/PayTranactionCashOrBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransactionStatusFromProcessedToPaid">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/UpdateTransactionStatusFromProcessedToPaid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTransactionPostQuery">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/ReturnTransactionPostQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfReturnTransactionPostQueryReasonMessage">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetListOfReturnTransactionPostQueryReasonMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadIDDocumentForPaidOrProcessedCashTransaction">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/UploadIDDocumentForPaidOrProcessedCashTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProofOfPayment">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/UploadProofOfPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveAPI/GetNationalityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveAPI">
+    <wsdl:port name="BasicHttpBinding_IReceiveAPI" binding="tns:BasicHttpBinding_IReceiveAPI">
+      <soap:address location="http://demo.api.uremit.ca/ReceiveAPI.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
